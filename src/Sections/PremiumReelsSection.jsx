@@ -9,23 +9,23 @@ const reels = [
     video: "/videos/product1.mp4",
   },
   {
-    punjabi: "ਵਾਟਰ ਕੂਲਰ",
-    english: "Water Cooler",
+    punjabi: "ਚਾਹ ਵਾਲੀ ਮਸ਼ੀਨ",
+    english: "Tea Tank Machine",
     video: "/videos/product2.mp4",
   },
   {
-    punjabi: "ਕੜਾਹ ਪ੍ਰਸ਼ਾਦ ਭਾਂਡਾ",
-    english: "Parshad Container",
+    punjabi: "ਕੜਾਹ ਪ੍ਰਸ਼ਾਦ ਮਸ਼ੀਨ",
+    english: "Kadah Prashad Machine",
     video: "/videos/product3.mp4",
   },
   {
-    punjabi: "ਕੜਾਹ ਪ੍ਰਸ਼ਾਦ ਭਾਂਡਾ",
+    punjabi: "ਪ੍ਰਭਾਤ ਫੇਰੀ ਰਿਕਸ਼ਾ",
     english: "Parbhatferi Rikshaw",
     video: "/videos/product4.mp4",
   },
   {
-    punjabi: "ਖੰਡਾ ਸਾਹਿਬ",
-    english: "Khanda Sahib",
+    punjabi: "ਖੰਡਾ",
+    english: "Khanda",
     video: "/videos/product5.mp4",
   },
 ];

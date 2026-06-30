@@ -76,12 +76,13 @@ const FeaturedShowcase = ({ onOpen }) => {
           </p>
 
           <div className="space-y-5 mb-10">
-
-            {[
-              "Premium Stainless Steel Craftsmanship",
-              "500+ Installations",
-              "Custom Sacred Solutions",
-            ].map((item, index) => (
+{[
+  "Premium Stainless Steel Craftsmanship",
+  "Custom Gurudwara & Sacred Solutions",
+  "Luxury PVD Coating Finishes",
+  "Worldwide Shipping & Global Dealings",
+  "500+ Successfully Delivered Installations",
+].map((item, index) => (
 
               <div
                 key={index}

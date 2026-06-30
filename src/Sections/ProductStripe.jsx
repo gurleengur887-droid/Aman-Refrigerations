@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import "./ProductStripe.css";
 
 const productNames = [
 
@@ -6,8 +6,8 @@ const productNames = [
   "ਪਾਲਕੀ ਸਾਹਿਬ",
   "Paalki Sahib",
 
-  "ਗੁਬੰਦ",
-  "Guband",
+  "ਗੁੰਬਦ",
+  "Gumbad",
 
   "ਪੀੜਾ ਸਾਹਿਬ",
   "Peeda Sahib",
@@ -15,38 +15,53 @@ const productNames = [
   "ਖੰਡਾ",
   "Khanda",
 
-  "ਖੰਡਾ ਸਾਹਿਬ",
-  "Khanda Sahib",
+  "ਗੋਲਕ",
+  "Golak",
+
+  "ਪਲੰਗ ਸਾਹਿਬ",
+  "Palang Sahib",
+   
+  "ਮਟਕੇ ਵਾਲਾ ਖੰਡਾ",
+  "Matka Khanda",
+
 
   // Spiritual Essentials
   "ਜੋਤ ਦਾਨੀ",
   "Jot Daani",
 
-  "ਜੋਤ",
-  "Jot",
-
-  "ਜੋਤ ਸਾਹਿਬ",
-  "Jot Sahib",
-
   // Langar Solutions
-  "ਕੜਾਹ ਕਾਊਂਟਰ",
-  "Kadah Counter",
+  "ਕੜਾਹ ਪ੍ਰਸ਼ਾਦ ਕਾਊਂਟਰ",
+  "Kadah Prashad Counter",
 
   "ਲੰਗਰ ਕੰਟੇਨਰ",
   "Langar Containers",
 
-  "ਲੰਗਰ ਵਾਟਰ",
-  "Langar Water",
-
-  // Utility Products
-  "ਡਿਸ਼ ਵਾਸ਼ਰ",
-  "Dish Washer",
-
-  "ਵਾਟਰ ਮਸ਼ੀਨ",
+  "ਪਾਣੀ ਵਾਲੀ ਮਸ਼ੀਨ",
   "Water Machine",
+  
+  "ਚਾਹ ਵਾਲੀ ਮਸ਼ੀਨ",
+  "Tea Tank Machine",
+
+   "ਜੋਤ ਸਾਹਿਬ",
+  "Jot Sahib",
+  // Utility Products
+  "ਭਾਂਡੇ ਧੋਣ ਵਾਲਾ ਸਿੰਕ",
+  "Sink",
+
+  "ਪਾਣੀ ਵਾਲੀ ਟਰਾਲੀ",
+  "Water Trolly",
+  
+  "ਕੜਾਹ ਮਸ਼ੀਨ",
+  "Kadah Machine",
 
   "ਵਾਈਪਰ",
   "Wiper",
+
+  "ਭਾਂਡੇ ਵਾਲੀ ਟਰਾਲੀ",
+  "Utensils Trolly",
+
+ "ਚਾਹ ਵਾਲੀ ਟਰਾਲੀ",
+ "Tea Tank",
 
   "ਪ੍ਰਭਾਤ ਫੇਰੀ ਰਿਕਸ਼ਾ",
   "Prabhatferi Rikshaw",
@@ -107,73 +122,68 @@ export default function ProductStrip() {
         "
       ></div>
 
-      {/* Moving Strip */}
-      <motion.div
-        animate={{
-          x: ["0%", "-50%"],
-        }}
-        transition={{
-          duration: 40,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+   <div className="marquee relative z-10">
+
+  <div className="marquee-track">
+
+    {[...productNames, ...productNames].map((name, index) => (
+
+      <div
+        key={index}
         className="
           flex
-          whitespace-nowrap
-          relative
-          z-10
-          will-change-transform
+          items-center
+          mx-5 md:mx-8 lg:mx-10
+          flex-shrink-0
+          group
         "
       >
 
-        {[...productNames, ...productNames].map((name, index) => (
+        <span
+          className="
+            text-[#163B68]
+            text-sm
+            sm:text-base
+            md:text-xl
+            lg:text-2xl
+            font-medium
+            tracking-wide
+            transition-all
+            duration-300
+            group-hover:text-[#D98B3A]
+          "
+        >
+          {name}
+        </span>
 
-          <div
-            key={index}
-            className="
-              flex items-center
-              mx-5 md:mx-8 lg:mx-10
-              flex-shrink-0
-              group
-            "
-          >
+        <div
+          className="
+            w-1.5
+            h-1.5
+            md:w-2
+            md:h-2
 
-            {/* Product Name */}
-            <span
-              className="
-                text-[#163B68]
-                text-sm
-                sm:text-base
-                md:text-xl
-                lg:text-2xl
-                font-medium
-                tracking-wide
-                transition-all
-                duration-300
-                group-hover:text-[#D98B3A]
-              "
-            >
-              {name}
-            </span>
+            rounded-full
 
-            {/* Luxury Dot */}
-            <div
-              className="
-                w-1.5 h-1.5
-                md:w-2 md:h-2
-                rounded-full
-                bg-[#D98B3A]
-                ml-5 md:ml-8 lg:ml-10
-                opacity-70
-                shadow-[0_0_12px_rgba(217,139,58,0.6)]
-              "
-            ></div>
+            bg-[#D98B3A]
 
-          </div>
+            ml-5
+            md:ml-8
+            lg:ml-10
 
-        ))}
+            opacity-70
 
-      </motion.div>
+            shadow-[0_0_12px_rgba(217,139,58,0.6)]
+          "
+        />
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
 
     </section>
   );

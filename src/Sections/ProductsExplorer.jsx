@@ -124,101 +124,95 @@ export default function ProductExplorer() {
 <motion.div
   key={product.id}
   onClick={() => setSelectedProduct(product)}
-  whileHover={{ y: -6 }}
+  whileHover={{ y: -8 }}
   transition={{
-    duration: 0.4,
+    duration: 0.45,
     ease: [0.22, 1, 0.36, 1],
   }}
   className="
-  relative
-  overflow-hidden
-  rounded-[26px]
-  bg-white
-  shadow-xl
-  group
+    w-[200px]
+    sm:w-[230px]
+    md:w-[270px]
+    lg:w-[290px]
 
-  w-[180px]
-  sm:w-[220px]
-  md:w-[260px]
-  lg:w-[280px]
+    bg-white
+    rounded-[28px]
+    overflow-hidden
+    shadow-[0_15px_40px_rgba(0,0,0,.08)]
 
-  aspect-[3/4]
-  flex-shrink-0
-  cursor-pointer
+    flex-shrink-0
+    cursor-pointer
+    group
+  "
+>
+ <div
+  className="
+    h-[300px]
+    bg-[#fbf8f3]
+    flex
+    items-center
+    justify-center
+    overflow-hidden
   "
 >
   <img
     src={product.image}
     alt={product.english}
-    className={`
-      absolute inset-0
-      w-full h-full
-
-      ${
-        product.fit === "contain"
-          ? "object-contain p-4 bg-[#f8f4ee]"
-          : "object-cover"
-      }
-
-      transition-all duration-700
+    className="
+      w-full
+      h-full
+      object-contain
+      p-5
+      transition-all
+      duration-500
       group-hover:scale-105
-    `}
-  />
-
-  {/* Overlay */}
-  <div
-    className="
-    absolute inset-0
-    bg-gradient-to-t
-    from-black/80
-    via-black/20
-    to-transparent
-  "
-  />
-
-  {/* Content */}
-  <div
-    className="
-    absolute bottom-0 left-0
-    w-full
-    p-4
-    z-10
     "
-  >
+  />
+</div>
+<div
+  className="
+    p-6
+    flex
+    flex-col
+    justify-between
+    h-[150px]
+  "
+>
+
     <h3
-      className="
-      text-white
-      text-base
-      md:text-xl
-      font-semibold
-      "
+        className="
+        text-[#163B68]
+        text-xl
+        font-semibold
+        "
     >
-      {product.punjabi}
+        {product.punjabi}
     </h3>
 
     <p
-      className="
-      text-gray-200
-      text-xs
-      md:text-sm
-      mt-1
-      "
+        className="
+        text-gray-500
+        mt-2
+        "
     >
-      {product.english}
+        {product.english}
     </p>
 
     <p
-      className="
-      mt-3
-      text-[#D4A85E]
-      uppercase
-      tracking-[3px]
-      text-[10px]
-      "
+        className="
+        mt-5
+        text-[#D4A85E]
+        uppercase
+        tracking-[3px]
+        text-[10px]
+        "
     >
-      Tap To Explore
+        Tap To Explore →
     </p>
-  </div>
+
+</div>
+
+  
 </motion.div>
 
                 

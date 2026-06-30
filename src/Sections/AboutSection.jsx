@@ -313,30 +313,39 @@ px-4
     "
   >
     Specializing in Gurudwara products, kitchen equipment and
-    customized fabrication solutions, every project is designed
+    customized fabrication solutions, every product is designed
     according to client requirements using AutoCAD-based planning
     and executed with exceptional craftsmanship.
   </p>
 
   <p
-    className="
-    mt-8
+  className="
+  mt-8
 
-    text-gray-600
+  text-gray-600
 
-    text-lg
-    md:text-xl
+  text-lg
+  md:text-xl
 
-    leading-[2.2]
+  leading-[2.2]
 
-    px-2
-    "
-  >
-    Over the years, our commitment to quality and customer
-    satisfaction has enabled us to serve clients across India,
-    delivering products that combine durability, functionality
-    and timeless elegance.
-  </p>
+  px-2
+  "
+>
+  Over the years, our commitment to quality and customer
+  satisfaction has enabled us to successfully complete
+  <span className="font-semibold text-[#163B68]">
+    {" "}500+ projects across India{" "}
+  </span>
+  and deliver
+  <span className="font-semibold text-[#163B68]">
+    {" "}100+ shipments worldwide
+  </span>,
+  serving Gurudwaras, institutions and clients both within
+  India and internationally. Every product reflects our
+  dedication to durability, functionality and timeless
+  craftsmanship.
+</p>
 
 </motion.div>
 <div className="h-16 md:h-20"></div>

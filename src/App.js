@@ -15,6 +15,7 @@ import ProductStripe from "./Sections/ProductStripe";
 import PremiumReelsSection from "./Sections/PremiumReelsSection";
 import CollectionPage from "./Sections/CollectionPage";
 import AboutSection from "./Sections/AboutSection";
+import VisitSection from "./Sections/VisitSection";
 function App() {
   const [showReel, setShowReel] = useState(false);
 
@@ -44,6 +45,7 @@ function App() {
               />
 
               <PremiumReelsSection />
+              <VisitSection />
                <AboutSection />
               
             </>

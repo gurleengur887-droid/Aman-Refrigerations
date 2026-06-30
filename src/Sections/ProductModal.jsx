@@ -1,4 +1,4 @@
-
+import { FiCheckCircle } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FiX,
@@ -335,7 +335,30 @@ export default function ProductModal({
               >
                 {product.description}
               </p>
+<div className="mt-8 space-y-4">
 
+  <div className="flex items-start gap-3">
+    <FiCheckCircle className="text-[#D4A85E] mt-1 text-xl flex-shrink-0" />
+    <p className="text-gray-700">
+      Manufactured using <strong>premium-grade stainless steel</strong> for exceptional durability, strength and long-lasting performance.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3">
+    <FiCheckCircle className="text-[#D4A85E] mt-1 text-xl flex-shrink-0" />
+    <p className="text-gray-700">
+      <strong>Fully customizable</strong> according to your preferred size, design and specific requirements.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3">
+    <FiCheckCircle className="text-[#D4A85E] mt-1 text-xl flex-shrink-0" />
+    <p className="text-gray-700">
+      We proudly <strong>ship worldwide</strong> and deliver custom-made products to customers across the globe.
+    </p>
+  </div>
+
+</div>
               <div className="flex gap-4 mt-10">
                 <a
                   href={`https://wa.me/919517231313?text=Waheguru Ji Ka Khalsa, I would like information about ${product.english}.`}

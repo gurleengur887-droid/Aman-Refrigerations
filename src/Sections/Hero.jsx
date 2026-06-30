@@ -1,7 +1,71 @@
 import { motion } from "framer-motion";
-
+import { Helmet } from "react-helmet-async";
 export default function Hero() {
   return (
+    <>
+  <Helmet>
+    <title>
+      Aman Refrigeration | Stainless Steel Gurudwara, Mandir &
+      Commercial Equipment Manufacturer
+    </title>
+
+    <meta
+      name="description"
+      content="Aman Refrigeration manufactures premium stainless steel products for Gurudwaras, Mandirs, Langar Halls, Commercial Kitchens, Dairy Equipment, Food Carts, Refrigeration Units and custom fabrication solutions across India."
+    />
+
+    <meta
+      name="keywords"
+      content="Aman Refrigeration, Stainless Steel Fabrication, Gurudwara Equipment, Mandir Equipment, Langar Equipment, Palki Sahib, Golak, Khanda Sahib, Food Cart Manufacturer, Dairy Equipment, Refrigeration Equipment, Commercial Kitchen Equipment, Ludhiana"
+    />
+
+    <meta
+      property="og:title"
+      content="Aman Refrigeration | Premium Stainless Steel Solutions"
+    />
+
+    <meta
+      property="og:description"
+      content="Trusted manufacturer of premium stainless steel products for Gurudwaras, Mandirs, Commercial Kitchens, Dairy and Refrigeration Equipment."
+    />
+
+    <meta
+      property="og:image"
+      content="/logo/logo.png"
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:url"
+      content="https://www.amanrefrigeration.com/"
+    />
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Aman Refrigeration"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Premium Stainless Steel Solutions for Gurudwaras, Mandirs, Dairy, Food & Commercial Industries."
+    />
+
+    <link
+      rel="canonical"
+      href="https://www.amanrefrigeration.com/"
+    />
+  </Helmet>
+
+ 
    <section
   className="
   relative
@@ -221,5 +285,6 @@ drop-shadow-sm
         ></motion.div>
       </div>
     </section>
+    </>
   );
 }

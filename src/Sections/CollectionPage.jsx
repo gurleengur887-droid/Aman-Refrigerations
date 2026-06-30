@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { Helmet } from "react-helmet-async";
 import { products } from "../data/products";
 import ProductModal from "./ProductModal";
 
@@ -53,6 +53,78 @@ useEffect(() => {
         );
 
   return (
+      <>
+    <Helmet>
+      <title>
+        Our Collection | Aman Refrigeration
+      </title>
+
+      <meta
+        name="description"
+        content="Explore Aman Refrigeration's premium collection of stainless steel Gurudwara equipment, Mandir products, Langar solutions, Food Carts, Dairy Equipment, Refrigeration Units, Commercial Kitchen Equipment and custom fabrication."
+      />
+
+      <meta
+        name="keywords"
+        content="Aman Refrigeration Collection, Gurudwara Products, Palki Sahib, Golak, Khanda Sahib, Langar Equipment, Stainless Steel Products, Dairy Equipment, Commercial Kitchen Equipment, Food Cart Manufacturer, Refrigeration Equipment"
+      />
+
+      <meta
+        property="og:title"
+        content="Our Collection | Aman Refrigeration"
+      />
+
+      <meta
+        property="og:description"
+        content="Browse our complete range of premium stainless steel fabrication solutions for Gurudwaras, Mandirs, Dairy, Refrigeration and Commercial Kitchens."
+      />
+
+      <meta
+        property="og:image"
+        content="/logo/logo.png"
+      />
+
+      <meta
+        property="og:type"
+        content="website"
+      />
+
+      <meta
+        property="og:url"
+        content="https://amanrefrigeration.com/collection"
+      />
+
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+      />
+
+      <meta
+        name="twitter:title"
+        content="Our Collection | Aman Refrigeration"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Explore premium stainless steel products for Gurudwaras, Mandirs, Langar Halls, Commercial Kitchens, Dairy Equipment and Refrigeration."
+      />
+
+      <link
+        rel="canonical"
+        href="https://amanrefrigeration.com/collection"
+      />
+      <script type="application/ld+json">
+{`
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Aman Refrigeration Collection",
+  "description":"Premium stainless steel products for Gurudwaras, Mandirs, Dairy Equipment, Food Carts and Commercial Kitchens.",
+  "url":"https://amanrefrigeration.com/collection"
+}
+`}
+</script>
+    </Helmet>
     <section className="relative bg-[#F7F2EB] min-h-screen overflow-hidden">
 
       {/* Ambient Glow */}
@@ -111,18 +183,31 @@ useEffect(() => {
       {/* Category Pills */}
    <div
   className="
-  relative
-  z-10
+    relative
+    z-10
 
-  mt-14
+    mt-14
 
-  px-4
+    overflow-x-auto
+    no-scrollbar
 
-  flex
-  flex-wrap
-  justify-center
+   
+  "
+>
+ <div
+  className="
+    flex
+    gap-3
 
-  gap-4
+    px-4
+    pb-2
+
+    w-max
+    whitespace-nowrap
+
+    md:w-auto
+    md:flex-wrap
+    md:justify-center
   "
 >
         {categories.map((category) => (
@@ -131,32 +216,54 @@ useEffect(() => {
 
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`
-           
-           px-5
-           py-3
-          whitespace-nowrap
-            rounded-full
+           className={`
+flex-shrink-0
 
-            text-sm
-            md:text-base
+px-5
+py-3
 
-            transition-all
-            duration-500
+whitespace-nowrap
 
-            ${
-              selectedCategory === category
-                ? "bg-[#D4A85E] text-white shadow-xl"
-                : "bg-white text-[#163B68] hover:-translate-y-1"
-            }
-            `}
+rounded-full
+
+text-sm
+md:text-base
+
+transition-all
+duration-500
+
+${
+  selectedCategory === category
+    ? "bg-[#D4A85E] text-white shadow-xl"
+    : "bg-white text-[#163B68] hover:-translate-y-1"
+}
+`}
           >
             {category}
           </button>
 
         ))}
       </div>
+</div>
+<p
+  className="
+    block
+    md:hidden
 
+    text-center
+    text-[#C6A76A]
+
+    text-xs
+    tracking-[3px]
+
+    animate-pulse
+
+    mt-5
+    mb-7
+  "
+>
+  ← Swipe Categories →
+</p>
       {/* Product Grid */}
       <div
         className="
@@ -232,25 +339,27 @@ useEffect(() => {
   {/* Image */}
   <div className="relative aspect-[3/4] overflow-hidden">
 
-    <img
-      src={product.image}
-      alt={product.english}
-      className={`
-      w-full
-      h-full
+   <img
+  src={product.image}
+  alt={product.english}
+  style={{
+    transform: `scale(${product.scale || 1})`,
+  }}
+  className={`
+    w-full
+    h-full
+    transition-all
+    duration-700
 
-      transition-all
-      duration-700
+    ${
+      product.fit === "cover"
+        ? "object-cover p-0"
+        : "object-contain p-2 bg-[#f8f4ee]"
+    }
 
-      group-hover:scale-110
-
-      ${
-        product.fit === "contain"
-          ? "object-contain p-6 bg-[#f8f4ee]"
-          : "object-cover"
-      }
-      `}
-    />
+    hover:scale-105
+  `}
+/>
 
     {/* Category Badge */}
     <div
@@ -365,5 +474,6 @@ useEffect(() => {
       />
 
     </section>
+    </>
   );
 }
