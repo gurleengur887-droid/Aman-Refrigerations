@@ -361,7 +361,7 @@ export default function ProductModal({
 </div>
               <div className="flex gap-4 mt-10">
                 <a
-                  href={`https://wa.me/919517231313?text=Waheguru Ji Ka Khalsa, I would like information about ${product.english}.`}
+                  href={`https://wa.me/919517231313?text=Sat Shri Akal, I would like information about ${product.english}.`}
                   target="_blank"
                   rel="noreferrer"
                   className="
