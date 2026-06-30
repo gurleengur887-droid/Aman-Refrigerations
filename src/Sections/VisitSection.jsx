@@ -347,58 +347,76 @@ export default function VisitSection() {
 
 
             {/* Buttons */}
-            <div
-              className="
-              mt-14
+           <div
+  className="
+  mt-14
 
-              flex
-              flex-wrap
+  flex
+  flex-col
+  items-center
 
-              gap-5
-              "
-            >
+  md:flex-row
+  md:items-start
+
+  gap-5
+  "
+>
 
              <a
   href="https://www.google.co.in/maps/place/Aman+Refrigeration/@30.8703354,75.8592718,16z/data=!3m1!4b1!4m6!3m5!1s0x391a8310dea26db3:0xd453ee666b973b60!8m2!3d30.8703354!4d75.8592718!16s%2Fg%2F11kn2qxkj_?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
   target="_blank"
   rel="noopener noreferrer"
   className="
-    px-10
-    py-5
-    rounded-full
-    bg-[#001F5B]
-    text-white
-    font-medium
-    transition-all
-    duration-500
-    hover:-translate-y-1
-  "
+w-full
+max-w-[320px]
+md:w-auto
+
+px-10
+py-5
+
+rounded-full
+
+bg-[#001F5B]
+text-white
+font-medium
+
+text-center
+
+transition-all
+duration-500
+
+hover:-translate-y-1
+"
 >
   Get Directions →
 </a>
 
               <a
                 href="tel:+919855051286"
-                className="
-                px-10
-                py-5
+              className="
+w-full
+max-w-[320px]
+md:w-auto
 
-                rounded-full
+px-10
+py-5
 
-                border
+rounded-full
 
-                border-[#D4A85E]
+border
+border-[#D4A85E]
 
-                text-[#0E2954]
+text-[#0E2954]
+font-medium
 
-                font-medium
+text-center
 
-                transition-all
-                duration-500
+transition-all
+duration-500
 
-                hover:bg-[#D4A85E]
-                hover:text-white
-                "
+hover:bg-[#D4A85E]
+hover:text-white
+"
               >
                 Call Now
               </a>

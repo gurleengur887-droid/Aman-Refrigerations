@@ -66,12 +66,12 @@ export default function Hero() {
   </Helmet>
 
  
-   <section
+  <section
   className="
   relative
   w-full
 
-  h-[85vh]
+  h-[72vh]
   md:h-[88vh]
 
   overflow-hidden
@@ -271,17 +271,18 @@ drop-shadow-sm
             ease: [0.22, 1, 0.36, 1],
           }}
           className="
-          flex
-          flex-col
-          sm:flex-row
+flex
+flex-col
+sm:flex-row
 
-          gap-5
+gap-5
 
-          mt-8
+mt-8
 
-          mb-20
-          lg:mb-28
-          "
+mb-8
+md:mb-20
+lg:mb-28
+"
         ></motion.div>
       </div>
     </section>
