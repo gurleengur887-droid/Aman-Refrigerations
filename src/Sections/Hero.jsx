@@ -41,7 +41,7 @@ export default function Hero() {
 
     <meta
       property="og:url"
-      content="https://www.amanrefrigeration.com/"
+      content="https://www.amanrefrigerations.in/"
     />
 
     <meta
@@ -61,7 +61,7 @@ export default function Hero() {
 
     <link
       rel="canonical"
-      href="https://www.amanrefrigeration.com/"
+      href="https://www.amanrefrigerations.in/"
     />
   </Helmet>
 

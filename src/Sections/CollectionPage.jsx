@@ -91,7 +91,7 @@ useEffect(() => {
 
       <meta
         property="og:url"
-        content="https://amanrefrigeration.com/collection"
+        content="https://amanrefrigerations.in/collection"
       />
 
       <meta
@@ -111,7 +111,7 @@ useEffect(() => {
 
       <link
         rel="canonical"
-        href="https://amanrefrigeration.com/collection"
+        href="https://amanrefrigerations.in/collection"
       />
       <script type="application/ld+json">
 {`
@@ -120,7 +120,7 @@ useEffect(() => {
   "@type":"CollectionPage",
   "name":"Aman Refrigeration Collection",
   "description":"Premium stainless steel products for Gurudwaras, Mandirs, Dairy Equipment, Food Carts and Commercial Kitchens.",
-  "url":"https://amanrefrigeration.com/collection"
+  "url":"https://amanrefrigerations.in/collection"
 }
 `}
 </script>
